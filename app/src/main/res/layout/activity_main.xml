@@ -12,7 +12,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/master_linear_layout"
         android:orientation="vertical"
+        android:focusableInTouchMode="true"
+        android:focusable="true"
         >
+        <!--Add focusable props to prevent edittext from gaining focus-->
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -88,6 +91,7 @@
             android:paddingStart="@dimen/small10dp_padding"
             android:paddingEnd="@dimen/small10dp_padding"
             android:id="@+id/question_three_edit_text"
+
             android:inputType="text" />
 
         <!--This will be another radio question-->
