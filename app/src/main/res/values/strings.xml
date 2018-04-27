@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">QuizAppNDAB</string>
+
+    <string name="wiki_source">https://en.wikipedia.org/wiki/Queen_bee</string>
+
+    <string name="question_one">1. The queen bee is female.</string>
+
+    <string name="question_two">2. Mark all that apply to Daily Life.</string>
+    <string name="question_two_correct_a">The queen bee controls the sex of the eggs laid.</string>
+    <string name="question_two_incorrect">The queen bee controls all hive activity.</string>
+    <string name="question_two_correct_b">The queen bee can lay 1,500 eggs per day.</string>
+
+    <string name="question_three">3. What legume does the queen cell resemble?</string>
+    <string name="question_three_answer">peanut</string>
+
+    <string name="edit_text_response_hint">Type your response here please.</string>
+    <string name="question_four">4. What pheromone inhibits queen cell formation?</string>
+    <string name="mandiublar_str">Mandiublar</string>
+    <string name="peasantry_str">Peasantry</string>
+    <string name="puberty_str">Puberty</string>
+    <string name="queen_bee_description">It is a queen bee.</string>
+    <string name="grade_quiz">Grade it!</string>
+    <string name="reset_responses">Reset responses</string>
+</resources>

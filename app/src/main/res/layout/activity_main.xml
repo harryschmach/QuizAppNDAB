@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hschmachte.quizappndab.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/master_linear_layout"
+        android:orientation="vertical"
+        >
+        <!--Always cite your sources-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:linksClickable="true"
+            android:id="@+id/wikipedia_source_tv"
+            android:text="@string/wiki_source"
+            android:layout_gravity="center"
+            android:autoLink="web"
+            />
+
+        <!--This is the first question. It is a radio group.-->
+        <TextView
+            style="@style/QuestionHeader"
+            android:text="@string/question_one"
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                style="@style/ResponseText"
+                android:id="@+id/question_one_correct"
+                android:text="True"/>
+            <RadioButton
+                style="@style/ResponseText"
+                android:id="@+id/question_one_incorrect"
+                android:text="False"/>
+        </RadioGroup>
+
+        <!--This question will group the check boxes.-->
+        <TextView
+            style="@style/QuestionHeader"
+            android:text="@string/question_two"
+            />
+        <!--This linear layout holds the checkboxes.-->
+        <!--I'm a nester, I can't help it.-->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <CheckBox
+                style="@style/ResponseText"
+                android:text="@string/question_two_correct_a"
+                android:id="@+id/question_two_correct_a"/>
+            <CheckBox
+                style="@style/ResponseText"
+                android:text="@string/question_two_incorrect"
+                android:id="@+id/question_two_incorrect"/>
+            <CheckBox
+                style="@style/ResponseText"
+                android:text="@string/question_two_correct_b"
+                android:id="@+id/question_two_correct_b"/>
+        </LinearLayout>
+        <!--This will be an EditText Question-->
+        <TextView
+            style="@style/QuestionHeader"
+            android:text="@string/question_three"
+            />
+        <EditText
+            style="@style/ResponseText"
+            android:paddingLeft="@dimen/small10dp_padding"
+            android:hint="@string/edit_text_response_hint"
+            android:paddingStart="@dimen/small10dp_padding"
+            android:id="@+id/question_three_edit_text"
+            android:inputType="text" />
+        <!--This will be another radio question-->
+        <TextView
+            style="@style/QuestionHeader"
+            android:text="@string/question_four"
+            />
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <RadioButton
+                style="@style/ResponseText"
+                android:id="@+id/question_four_correct"
+                android:text="@string/mandiublar_str"/>
+            <RadioButton
+                style="@style/ResponseText"
+                android:id="@+id/question_four_incorrect_a"
+                android:text="@string/peasantry_str"/>
+            <RadioButton
+                style="@style/ResponseText"
+                android:id="@+id/question_four_incorrect_b"
+                android:text="@string/puberty_str"/>
+        </RadioGroup>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/queenbee"
+                android:id="@+id/queen_bee_pic"
+                android:contentDescription="@string/queen_bee_description" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/grade_quiz"
+                android:id="@+id/btn_grader"
+                android:onClick="gradeItAll"
+                android:layout_alignTop="@id/queen_bee_pic"
+                android:layout_alignStart="@id/queen_bee_pic"
+                android:layout_alignLeft="@id/queen_bee_pic" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/reset_responses"
+                android:id="@+id/reset"
+                android:layout_alignTop="@id/queen_bee_pic"
+                android:layout_alignRight="@id/queen_bee_pic"
+                android:onClick="resetItAll"
+                android:layout_alignEnd="@id/queen_bee_pic" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>
