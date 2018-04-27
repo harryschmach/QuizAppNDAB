@@ -21,4 +21,7 @@
     <string name="queen_bee_description">It is a queen bee.</string>
     <string name="grade_quiz">Grade it!</string>
     <string name="reset_responses">Reset responses</string>
+    <string name="wiki_intro_str">Sources gathererd from Wikipedia (link below)</string>
+    <string name="true_string">True</string>
+    <string name="false_string">False</string>
 </resources>

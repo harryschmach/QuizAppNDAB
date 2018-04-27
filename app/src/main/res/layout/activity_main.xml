@@ -13,6 +13,11 @@
         android:id="@+id/master_linear_layout"
         android:orientation="vertical"
         >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/wiki_intro_str"
+            android:layout_gravity="center"/>
         <!--Always cite your sources-->
         <TextView
             android:layout_width="wrap_content"
@@ -32,14 +37,16 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+            <!--This first button is the correct one (queen bee is female - True)-->
             <RadioButton
                 style="@style/ResponseText"
                 android:id="@+id/question_one_correct"
-                android:text="True"/>
+                android:text="@string/true_string"/>
+            <!--Queen bee is not male so asserting it is false that it is female is incorrect - False -->
             <RadioButton
                 style="@style/ResponseText"
                 android:id="@+id/question_one_incorrect"
-                android:text="False"/>
+                android:text="@string/false_string"/>
         </RadioGroup>
 
         <!--This question will group the check boxes.-->
@@ -53,14 +60,17 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+            <!--This is one of the correct marks-->
             <CheckBox
                 style="@style/ResponseText"
                 android:text="@string/question_two_correct_a"
                 android:id="@+id/question_two_correct_a"/>
+            <!--This is an incorrect response-->
             <CheckBox
                 style="@style/ResponseText"
                 android:text="@string/question_two_incorrect"
                 android:id="@+id/question_two_incorrect"/>
+            <!--This is also correct. That's a lot of Eggs!!!-->
             <CheckBox
                 style="@style/ResponseText"
                 android:text="@string/question_two_correct_b"
@@ -76,8 +86,10 @@
             android:paddingLeft="@dimen/small10dp_padding"
             android:hint="@string/edit_text_response_hint"
             android:paddingStart="@dimen/small10dp_padding"
+            android:paddingEnd="@dimen/small10dp_padding"
             android:id="@+id/question_three_edit_text"
             android:inputType="text" />
+
         <!--This will be another radio question-->
         <TextView
             style="@style/QuestionHeader"
@@ -86,20 +98,23 @@
         <RadioGroup
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
+            <!--It is the mandibular pheromone that makes queen cells not form-->
             <RadioButton
                 style="@style/ResponseText"
                 android:id="@+id/question_four_correct"
                 android:text="@string/mandiublar_str"/>
+            <!--There are no peasntry pheromones, silly.-->
             <RadioButton
                 style="@style/ResponseText"
                 android:id="@+id/question_four_incorrect_a"
                 android:text="@string/peasantry_str"/>
+            <!--I don't know if bees go through puberty... but it doesn't determine their sex-->
             <RadioButton
                 style="@style/ResponseText"
                 android:id="@+id/question_four_incorrect_b"
                 android:text="@string/puberty_str"/>
         </RadioGroup>
-
+        <!--This grouping holds the buttons to score and reset the quiz-->
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -110,7 +125,7 @@
                 android:src="@drawable/queenbee"
                 android:id="@+id/queen_bee_pic"
                 android:contentDescription="@string/queen_bee_description" />
-
+            <!--Score the quiz-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -120,6 +135,7 @@
                 android:layout_alignTop="@id/queen_bee_pic"
                 android:layout_alignStart="@id/queen_bee_pic"
                 android:layout_alignLeft="@id/queen_bee_pic" />
+            <!--Reset the responses-->
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
